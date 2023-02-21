@@ -1,0 +1,48 @@
+.textbox {
+    @include flex-column-align-center;
+    max-width: 45.625rem;
+
+    &--hero {
+        @include flex-column-align-center;
+        align-items: flex-start;
+        row-gap: 2rem;
+    
+        @include respond(medium-screen) {
+            row-gap: 2.5rem;
+        }
+    }
+
+    &--stats {
+        gap: 1px;
+        @include respond(stats) {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+
+    &--quote {
+        @include flex-column-align-center;
+        padding: 0 1rem;
+        gap: 2.5rem;
+        max-width: 35.8125rem;
+
+        @include respond(stats) {
+            align-items: flex-start;
+            text-align: left;
+            padding: 0;
+            max-width: 21.875rem;
+        }
+    }
+
+    &--quote-author {
+        @include flex-column-align-center;
+        @include respond(stats) {
+            align-items: flex-start;
+            text-align: left;
+        }
+        @include respond(big-screen) {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+}

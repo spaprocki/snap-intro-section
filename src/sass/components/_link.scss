@@ -1,0 +1,35 @@
+.link {
+    text-decoration: none;
+    color: $color-dark-blue;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: left;
+    transition: transform 0.2s;
+
+    &:active img {
+        transform: scale(1.02);
+      }
+
+    &:hover {
+        filter: brightness(0) saturate(100%) invert(29%) sepia(33%) saturate(430%) hue-rotate(180deg) brightness(97%) contrast(84%);
+    }
+
+    &:focus, :focus-visible {
+        outline: none;
+        & img {
+            outline-width: 3px;
+            outline-style:  dashed;
+            outline-offset: 5px;
+            outline-color: $color-dark-blue; 
+        }
+        
+
+        &:focus:not(:focus-visible) {
+            outline: none;
+            & img {
+                outline: none;
+            }
+            
+          }
+      }
+}

@@ -1,0 +1,11 @@
+.logo {
+    &--footer {
+        margin: auto;
+        @include respond(medium-screen) {
+            width: auto;
+            height: 100%;
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./menubar-navigation.css" />
+    <script src="./scripts/menubar-navigation.js" defer></script>
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/logo.svg" alt="snap logo" class="header__logo logo" />
+      button.
+      <nav aria-label="snap company">
+        <ul class="menubar-navigation" role="menubar" aria-label="snap company">
+          <li role="none">
+            <a
+              role="menuitem"
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#features"
+            >
+              Features
+              <img
+                src="./assets/icon-arrow-down.svg"
+                aria-hidden="true"
+                alt=""
+                class="icon-arrow"
+              />
+            </a>
+            <ul role="menu" aria-label="Features">
+              <li role="none">
+                <a role="menuitem" href="#overview">
+                  <img
+                    src="./assets/icon-todo.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="icon-arrow"
+                  />Todo List
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#administration">
+                  <img
+                    src="./assets/icon-calendar.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="icon-arrow"
+                  />Calendar
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#reminders">
+                  <img
+                    src="./assets/icon-reminders.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="icon-arrow"
+                  />Reminders
+                </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#planning">
+                  <img
+                    src="./assets/icon-planning.svg"
+                    aria-hidden="true"
+                    alt=""
+                    class="icon-arrow"
+                  />Planning
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="company"
+            >
+              Company
+              <img
+                src="./assets/icon-arrow-down.svg"
+                aria-hidden="true"
+                alt=""
+                class="icon-arrow"
+              />
+            </a>
+            <ul role="menu" aria-label="Company">
+              <li role="none">
+                <a role="menuitem" href="#apply"> History </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#apply"> Our Team </a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="#apply"> Blog </a>
+              </li>
+            </ul>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#apply"> Careers </a>
+          </li>
+          <li role="none">
+            <a role="menuitem" href="#apply"> About </a>
+          </li>
+        </ul>
+        <div class="buttons-container">
+          <button class="btn btn--text">Login</button>
+          <button class="btn btn--secondary">Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <picture class="hero__picture">
+          <source
+            media="(min-width:768px)"
+            srcset="./assets/image-hero-desktop.png"
+          />
+          <img
+            src="./assets/image-hero-mobile.png"
+            alt="A person working on a laptop"
+          />
+        </picture>
+        <div class="hero__textbox textbox">
+          <h1 class="heading">Make remote work</h1>
+          <p class="paragraph">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn btn--primary">Learn more</button>
+          <ul class="partners">
+            <li><img src="./assets/client-databiz.svg" alt="" /></li>
+            <li><img src="./assets/client-audiophile.svg" alt="" /></li>
+            <li><img src="./assets/client-meet.svg" alt="" /></li>
+            <li><img src="./assets/client-maker.svg" alt="" /></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+.main {
+    width: 100%;
+    
+    & > * {
+        width: 100%;
+        @include flex-column-align-center;
+    }
+
+.hero {
+        margin-top: clamp(5.1875rem, calc(21.63vw + 0.12rem), 10.5rem);
+        @include horizontal-padding;
+
+        &__inner {
+            width: 100%;
+            max-width: 69.375rem;
+            position: relative;
+            @include flex-column-align-center;
+
+            @include respond(stats) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+    
+        &__textbox {
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        &__picture {
+            margin-top: 3.5rem;
+            width: 100%;
+
+            @include respond(medium-screen) {
+                margin-top: 0;
+                width: clamp(17.5625rem, calc(10.27vw + 12.63rem), 21.875rem);
+                position: absolute;
+                top: -6.4375rem;
+                right: 0;
+                left: clamp(25.5rem, calc(9.82vw + 20.79rem), 29.625rem);
+                z-index: -1;
+            }
+        }
+
+        &__stats {
+            margin-top: 3.5rem;
+            @include respond(medium-screen) {
+                margin-top: 8rem;
+            }
+            @include respond(stats) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .review {
+        margin-top: clamp(14.8125rem, calc(9.16vw + 12.67rem), 17.0625rem);
+        
+        @include respond(medium-screen) {
+            @include horizontal-padding;
+            margin-top: clamp(17.0625rem, calc(4.46vw + 14.92rem), 18.9375rem);
+
+        }
+
+        &__figure {
+            position: relative;
+            width: 100%;
+            max-width: 43.0625rem; 
+            padding-bottom: 4rem;
+            border-radius: 0.9375rem;
+            @include flex-column-align-center;
+            background-color: $color-dark-blue;
+            z-index: 2;
+
+            @include respond(medium-screen) {
+                max-width: 69.375rem;
+            }
+
+            @include respond(stats) {
+                position: relative;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-end;
+                padding:    clamp(4rem, calc(5.77vw + 0.31rem), 5.5rem)
+                            clamp(3.625rem, calc(16.11vw + -6.68rem), 7.8125rem)
+                            clamp(4rem, calc(5.77vw + 0.31rem), 5.5rem)
+                            clamp(3.625rem, calc(12.98vw + -4.68rem), 7rem);
+            }
+        }
+
+        &__picture {
+            margin-top: -11.3125rem;
+            @include flex-column-align-center;
+            width: 100%;
+            background-image: url('assets/pattern-blur.svg');
+            background-size: contain;
+
+            @include respond(stats) {
+                position: absolute;
+                margin-top: 0;
+                bottom: 0;
+                left: clamp(4rem, calc(11.54vw + -3.38rem), 7rem);
+                height: 110%;
+                width: auto;
+                // width: clamp(15.75rem, calc(29.57vw + -3.17rem), 23.4375rem);
+            }
+        }
+
+        &__blur {
+            @include respond(stats) {
+            left: clamp(5.875rem, calc(7.14vw + 2.45rem), 8.875rem);        }
+        }
+
+        &__decoration {
+            margin-top: 2.5rem;
+            @include respond(stats) {
+                margin-top: 4.5rem;
+                margin-right: 3.3125rem;
+            }
+        }
+
+        &__quote {
+            margin-top: 2.3125rem;
+            @include respond(stats) {
+                margin-top: 0;
+            }
+        }
+
+        &__author {
+            margin-top: 2.5rem;
+        }
+
+    }
+
+    
+}
+
+
